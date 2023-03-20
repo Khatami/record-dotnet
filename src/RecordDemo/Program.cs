@@ -60,16 +60,31 @@
 			Console.WriteLine("********************************");
 
 			// 7- In records you can create a new copy of object by changing only required property
+			Console.WriteLine("********************************");
 			var rp4 = rp1 with { LastName = "Hamed" };
 			Console.WriteLine($"FirstName is {rp4.FirstName} and LastName is {rp4.LastName}");
 			Console.WriteLine(ReferenceEquals(rp4, rp1));
+			Console.WriteLine("********************************");
+
+			Console.WriteLine("********************************");
+			Console.WriteLine(new StudentRecord("Hamed", "Khatami"));
+			Console.WriteLine("********************************");
 		}
 	}
 
 	// Records are fancy classes
 	// Records Are Reference Types
-	// Records Are Immutable
+	// Records Are Immutable by default (not always)
+	// Records Are Classes, There are lots of stuff around them
+	// Records can copy by using with keywords easily
 	public record PersonRecord(string FirstName, string LastName);
+
+	// Records are immutable by defualt, but if you want to use tranditional getter and setter, it is not immutable anymore
+	// Records can inherit and inherit from another record
+	public record StudentRecord(string FirstName, string LastName)
+	{
+		public byte Age { get; set; }
+	}
 
 	public class PersonClass
 	{
