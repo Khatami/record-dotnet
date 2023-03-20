@@ -72,7 +72,7 @@
 		}
 	}
 
-	// Records are fancy classes
+	// Records are fancy classes (Have built-in tostring, equals, gethashcode, equality operator, deconstructor)
 	// Records Are Reference Types
 	// Records Are Immutable by default (not always)
 	// Records Are Classes, There are lots of stuff around them
